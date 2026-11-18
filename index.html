@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Edison Paracuelles | Data cleaning and small automations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbfcfb;--ink:#14211b;--mute:#53645b;--line:#cfdad3;--head:#eaf3ee;--acc:#0e7a4d;--acc-ink:#ffffff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1612;--ink:#e8f1ec;--mute:#9fb3a8;--line:#2a3a31;--head:#16241d;--acc:#3fcf8e;--acc-ink:#07140d}}
+:root[data-theme="dark"]{--bg:#0e1612;--ink:#e8f1ec;--mute:#9fb3a8;--line:#2a3a31;--head:#16241d;--acc:#3fcf8e;--acc-ink:#07140d}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 "Public Sans",system-ui,sans-serif}
+.wrap{max-width:760px;margin:0 auto;padding:44px 20px 40px}
+h1,h2{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+h1{font-size:clamp(38px,10vw,60px);font-weight:700;letter-spacing:-.02em}
+h2{font-size:26px;font-weight:600;margin-bottom:14px}
+.lead{font-size:18px;color:var(--mute);margin:16px 0 24px;max-width:34em}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--acc)}
+.btn.p{background:var(--acc);color:var(--acc-ink)}
+.btn.s{color:var(--acc);background:transparent}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+section{margin-top:52px}
+.sheet{border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.row{display:grid;grid-template-columns:200px 1fr 190px;border-top:1px solid var(--line)}
+.row>*{padding:12px 14px}
+.row>*+*{border-left:1px solid var(--line)}
+.row.h{background:var(--head);border-top:0;font-weight:600;font-size:14px;color:var(--mute)}
+.row b{font-weight:600}
+.row .tools{font-size:14px;color:var(--mute)}
+.row a{color:var(--acc);font-weight:600}
+.note{color:var(--mute);font-size:14px;margin-top:12px}
+.cta p{color:var(--mute);margin:0 0 18px;max-width:32em}
+footer{margin-top:48px;color:var(--mute);font-size:14px}
+a{color:var(--acc)}
+@media (max-width:640px){
+ .row,.row.h{grid-template-columns:1fr}
+ .row.h{display:none}
+ .row>*+*{border-left:0;padding-top:0}
+ .row>*:last-child{padding-bottom:14px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header>
+<h1>Edison Paracuelles</h1>
+<p class="lead">I clean messy lists, connect Google Sheets and Telegram, and build small web tools. Based in Palompon, Leyte. Everything below I built and tested myself.</p>
+<div class="btns">
+<a class="btn p" href="https://m.me/TotskieApps">Message me</a>
+<a class="btn s" href="tel:+639096010765">Call</a>
+</div>
+</header>
+
+<section>
+<h2>Projects</h2>
+<div class="sheet" role="table" aria-label="Projects">
+<div class="row h" role="row"><div role="columnheader">Project</div><div role="columnheader">What it does</div><div role="columnheader">Made with</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Webhook to Sheets to Telegram</b></div><div role="cell">A new order arrives by webhook, is added as a row in Google Sheets, and a Telegram message tells the owner.</div><div class="tools" role="cell">Make, Google Sheets, Telegram</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Lead list cleaner</b></div><div role="cell">Takes a messy lead list and fixes duplicates, spacing and formatting into a clean file.</div><div class="tools" role="cell">Python, CSV</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Telegram grocery bot</b></div><div role="cell">A Telegram bot that keeps a grocery list you can update by chat.</div><div class="tools" role="cell">Python, Telegram Bot</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Books scraper</b></div><div role="cell">Collects book titles and prices from a practice site into a spreadsheet, following written scraping rules.</div><div class="tools" role="cell">Python</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Flask dashboard</b></div><div role="cell">A small web dashboard for viewing records, built and run from a phone.</div><div class="tools" role="cell">Python, Flask</div></div>
+
+<div class="row" role="row"><div role="cell"><b>API and webhook practice</b></div><div role="cell">Practice repository for sending and receiving data between apps, with tests on a live webhook.</div><div class="tools" role="cell">curl, Python, GitHub</div></div>
+
+<div class="row" role="row"><div role="cell"><b>Totskie Apps landing page</b></div><div role="cell">A one-page website for a restaurant POS, with Message and Call buttons. <a href="https://dummygame012022-a11y.github.io/totskie-apps">See it live</a></div><div class="tools" role="cell">HTML, CSS, GitHub Pages</div></div>
+
+</div>
+<p class="note">More code on <a href="https://github.com/dummygame012022-a11y">my GitHub</a>.</p>
+</section>
+
+<section class="cta">
+<h2>Have a small job?</h2>
+<p>Tell me what needs cleaning or connecting. I will reply with a fixed price before I start.</p>
+<div class="btns">
+<a class="btn p" href="https://m.me/TotskieApps">Message me</a>
+<a class="btn s" href="tel:+639096010765">Call</a>
+</div>
+</section>
+
+<footer>Edison Paracuelles, Palompon, Leyte</footer>
+</main>
+</body>
+</html>
